@@ -11,7 +11,7 @@ RUN yum -y install nodejs npm; yum clean all
 # Copy source code to /src in container
 COPY . /src
 RUN sudo chown -R root:admin /src
-RUN sudo chmod 777 test
+RUN sudo chmod -R 777 test
 
 # Install app and dependencies into /src in container
 RUN cd /src; npm install

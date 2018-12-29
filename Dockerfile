@@ -6,6 +6,7 @@ LABEL MAINTAINER=nigelpoulton@hotmail.com
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release; yum clean all
 RUN yum -y install nodejs npm; yum clean all
+RUN npm install supertest --save-dev
 
 # Copy source code to /src in container
 COPY . /src

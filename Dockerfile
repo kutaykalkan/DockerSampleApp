@@ -9,7 +9,7 @@ RUN yum -y install nodejs npm; yum clean all
 #RUN npm install supertest --save-dev
 
 # Copy source code to /src in container
-COPY --chown=root . /src
+COPY --chown=root:wheel . /src
 
 # Install app and dependencies into /src in container
 RUN cd /src; npm install
